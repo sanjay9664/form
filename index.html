@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-image: url("https://images.unsplash.com/photo-1667471729596-8b187c137e8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60");
+        background-position: center;
+        /* background-size: cover; */
+      }
+      #container {
+        width: 600px;
+        height: 370px;
+        padding: 20px;
+
+        /* text-align: center; */
+        border: 1px solid white;
+        margin: auto;
+        margin-top: 300px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        
+      }
+      h2 {
+        text-align: center;
+        color: rgb(213, 124, 7);
+      }
+      p {
+        text-align: center;
+      }
+      input {
+        padding-right: 50px;
+        padding: 5px;
+      }
+      label {
+      }
+
+      #data {
+        padding: 3px 80px;
+      }
+      #time {
+        padding: 5px 125px;
+      }
+      label {
+        font-size: 20px;
+      }
+      #btn {
+        margin-top: 10px;
+        padding: 5px 280px;
+        background-color: rgb(213, 124, 7);
+        color: white;
+       
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Book a call with sharphner</h2>
+      <p>
+        Book a call slot and our representative with call you in 1h selected
+        time
+      </p>
+      <hr />
+     <form id="form" onsubmit="store(event)">
+      <label>Name:</label><br />
+      <input type="text" size="77px" id="name" /><br />
+      <label>Email:</label><br />
+      <input type="text" size="77px" /><br />
+      <label>Phone:</label><br />
+      <input type="text" size="77px" /><br />
+      <label>Take for call:</label><br />
+      <input type="date" id="data" />
+      <select id="time">
+        <option value="">10:00</option>
+        <option value="">11:00</option>
+        <option value="">12:00</option>
+        <option value="">1:00</option></select
+      ><br /><br />
+      <button id="btn">Calling</button>
+    </div>
+</form>
+  </body>
+</html>
+
+<script>
+    function store(event){
+
+    event.preventDefault()
+
+    let form = document.getElementById("form").style.background="green";
+
+    let name = form.name.value.style.background = "black"
+
+    console.log(form ,name)
+    }
+</script>
